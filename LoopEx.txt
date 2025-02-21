@@ -1,0 +1,71 @@
+using System;
+
+public class LoopExamples
+{
+    public static void Main(string[] args)
+    {
+        // Step 1: Using a For Loop to Calculate Total Scores
+        int[] scores = { 85, 90, 78, 92, 88 };
+        int totalScore = 0;
+
+        for (int i = 0; i < scores.Length; i++)
+        {
+            totalScore += scores[i];
+        }
+
+        Console.WriteLine("Total score: " + totalScore);
+
+        // Step 2: Using a While Loop to Calculate Factorials
+        int number = 5;
+        int factorial = 1;
+        int tempNumber = number;
+
+        while (tempNumber > 0)
+        {
+            factorial *= tempNumber;
+            tempNumber--;
+        }
+
+        Console.WriteLine("Factorial of " + number + " is: " + factorial);
+
+        // Step 3: Combining Loops and If-Else to Determine Pass or Fail
+        int[] studentScores = { 45, 60, 72, 38, 55 };
+
+        for (int i = 0; i < studentScores.Length; i++)
+        {
+            if (studentScores[i] >= 50)
+            {
+                Console.WriteLine("Pass");
+            }
+            else
+            {
+                Console.WriteLine("Fail");
+            }
+        }
+
+        // Step 4: Combining Loops and Switch Statements for Task Scheduling
+        string[] weekDays = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
+
+        for (int i = 0; i < weekDays.Length; i++)
+        {
+            switch (weekDays[i])
+            {
+                case "Monday":
+                    Console.WriteLine("Monday: Team Meeting");
+                    break;
+                case "Tuesday":
+                    Console.WriteLine("Tuesday: Code Review");
+                    break;
+                case "Wednesday":
+                    Console.WriteLine("Wednesday: Development");
+                    break;
+                case "Thursday":
+                    Console.WriteLine("Thursday: Testing");
+                    break;
+                case "Friday":
+                    Console.WriteLine("Friday: Deployment");
+                    break;
+            }
+        }
+    }
+}
